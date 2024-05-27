@@ -11,8 +11,8 @@ backend/**/migrations/
 /backend/.env
 /frontend/.env
 
-# GitHub Actions
-/.github/
+# # GitHub Actions
+# /.github/
 
 # System files
 .DS_Store
