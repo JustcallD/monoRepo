@@ -27,10 +27,15 @@ jobs:
           python -m venv venv
           source venv/bin/activate
 
-      - name: Install dependencies
+      - name: Install Django dependencies
         run: |
-          source venv/bin/activate 
-          pip install -r requirements.txt
+          source venv/bin/activate
+          pip install Django djangorestframework gunicorn psycopg2-binary whitenoise
+  
+      - name: Generate requirements.txt
+        run: |
+          source venv/bin/activate
+          pip freeze > server/requirements.txt
 
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
 
